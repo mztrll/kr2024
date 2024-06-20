@@ -1,0 +1,427 @@
+{
+  "project" : {
+    "id" : "",
+    "name" : "",
+    "folder" : "/jaicp"
+  },
+  "settings" : {
+    "language" : "ru",
+    "spellingCorrection" : false,
+    "classificationAlgorithm" : "sts",
+    "timezone" : "Europe/Moscow",
+    "extendedSettings" : {
+      "tokenizerEngine" : "default"
+    },
+    "businessShared" : false,
+    "business" : false
+  },
+  "intents" : [ {
+    "id" : 8,
+    "path" : "/sex",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false,
+    "phrases" : [ {
+      "text" : "Мужской"
+    }, {
+      "text" : "Женский"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "var_sex",
+      "entity" : "var_sex",
+      "required" : true,
+      "prompts" : [ "Какой пол мне указать в анкете?" ]
+    } ]
+  }, {
+    "id" : 4,
+    "path" : "/stud",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false,
+    "phrases" : [ {
+      "text" : "Да, студент"
+    }, {
+      "text" : "Нет, не студент"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "var_stud",
+      "entity" : "var_stud",
+      "required" : true,
+      "prompts" : [ "Являетесь ли вы студентом?" ]
+    } ]
+  }, {
+    "id" : 1,
+    "path" : "/choose_dom",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false,
+    "phrases" : [ {
+      "text" : "в общежити"
+    }, {
+      "text" : "снимаю квартиру"
+    }, {
+      "text" : "проживаю с родителями"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "var_dom",
+      "entity" : "var_dom",
+      "required" : true,
+      "prompts" : [ "Если Вы студент, подскажите пожалуйста где проживаете в настоящее время?" ]
+    } ]
+  }, {
+    "id" : 2,
+    "path" : "/q2",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false,
+    "phrases" : [ {
+      "text" : "Да"
+    }, {
+      "text" : "Нет"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "q2",
+      "entity" : "q2",
+      "required" : true,
+      "prompts" : [ "Достаточная ли у Вас по Вашему мнению физическая активность?" ]
+    } ]
+  }, {
+    "id" : 6,
+    "path" : "/q6",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false,
+    "phrases" : [ {
+      "text" : "Да"
+    }, {
+      "text" : "Нет"
+    }, {
+      "text" : "Не знаю"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "q6",
+      "entity" : "q6",
+      "required" : true,
+      "prompts" : [ "Слышали ли вы от матери или отца, что они принимают лекарства от высокого давления?" ]
+    } ]
+  }, {
+    "id" : 5,
+    "path" : "/q5",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false,
+    "phrases" : [ {
+      "text" : "Да"
+    }, {
+      "text" : "Нет"
+    }, {
+      "text" : "Не знаю"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "q5",
+      "entity" : "q5",
+      "required" : true,
+      "prompts" : [ "Имеется ли у матери или отца повышенное артериальное давление?" ]
+    } ]
+  }, {
+    "id" : 7,
+    "path" : "/q7",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false,
+    "phrases" : [ {
+      "text" : "Да"
+    }, {
+      "text" : "Нет"
+    }, {
+      "text" : "Не знаю"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "q7",
+      "entity" : "q7",
+      "required" : true,
+      "prompts" : [ "Были ли у ваших родителей, бабушек, дедушек инфаркты, инсульты, случаи внезапной смерти в возрасте <55 лет для мужчин и в возрасте <65 лет для женщин?" ]
+    } ]
+  }, {
+    "id" : 12,
+    "path" : "/smoke",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false,
+    "phrases" : [ {
+      "text" : "Да, курю"
+    }, {
+      "text" : "Нет, не курю"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "var_smoke",
+      "entity" : "var_smoke",
+      "required" : true,
+      "prompts" : [ "Курите ли Вы в настоящее время?" ]
+    } ]
+  }, {
+    "id" : 13,
+    "path" : "/q13",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false,
+    "phrases" : [ {
+      "text" : "Нет"
+    }, {
+      "text" : "Не знаю"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "q13",
+      "entity" : "q13",
+      "required" : true,
+      "prompts" : [ "Вы курите сигареты или используете альтернативные системы нагревания табака?" ]
+    } ]
+  } ],
+  "entities" : [ {
+    "entity" : {
+      "id" : 8,
+      "name" : "var_sex",
+      "enabled" : true,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false
+    },
+    "records" : [ {
+      "id" : 20,
+      "type" : "synonyms",
+      "rule" : [ "Мужской" ],
+      "value" : "20"
+    }, {
+      "id" : 21,
+      "type" : "synonyms",
+      "rule" : [ "Женский" ],
+      "value" : "21"
+    } ]
+  }, {
+    "entity" : {
+      "id" : 4,
+      "name" : "var_stud",
+      "enabled" : true,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false
+    },
+    "records" : [ {
+      "id" : 9,
+      "type" : "synonyms",
+      "rule" : [ "Да, студент" ],
+      "value" : "9"
+    }, {
+      "id" : 13,
+      "type" : "synonyms",
+      "rule" : [ "Нет, не студент" ],
+      "value" : "13"
+    } ]
+  }, {
+    "entity" : {
+      "id" : 1,
+      "name" : "var_dom",
+      "enabled" : true,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false
+    },
+    "records" : [ {
+      "id" : 1,
+      "type" : "synonyms",
+      "rule" : [ "в общежити" ],
+      "value" : "1"
+    }, {
+      "id" : 2,
+      "type" : "synonyms",
+      "rule" : [ "снимаю квартиру" ],
+      "value" : "2"
+    }, {
+      "id" : 3,
+      "type" : "synonyms",
+      "rule" : [ "проживаю с родителями" ],
+      "value" : "3"
+    } ]
+  }, {
+    "entity" : {
+      "id" : 2,
+      "name" : "q2",
+      "enabled" : true,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false
+    },
+    "records" : [ {
+      "id" : 4,
+      "type" : "synonyms",
+      "rule" : [ "Да" ],
+      "value" : "4"
+    }, {
+      "id" : 5,
+      "type" : "synonyms",
+      "rule" : [ "Нет" ],
+      "value" : "5"
+    } ]
+  }, {
+    "entity" : {
+      "id" : 6,
+      "name" : "q6",
+      "enabled" : true,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false
+    },
+    "records" : [ {
+      "id" : 4,
+      "type" : "synonyms",
+      "rule" : [ "Да" ],
+      "value" : "4"
+    }, {
+      "id" : 5,
+      "type" : "synonyms",
+      "rule" : [ "Нет" ],
+      "value" : "5"
+    }, {
+      "id" : 6,
+      "type" : "synonyms",
+      "rule" : [ "Не знаю" ],
+      "value" : "6"
+    } ]
+  }, {
+    "entity" : {
+      "id" : 5,
+      "name" : "q5",
+      "enabled" : true,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false
+    },
+    "records" : [ {
+      "id" : 4,
+      "type" : "synonyms",
+      "rule" : [ "Да" ],
+      "value" : "4"
+    }, {
+      "id" : 5,
+      "type" : "synonyms",
+      "rule" : [ "Нет" ],
+      "value" : "5"
+    }, {
+      "id" : 6,
+      "type" : "synonyms",
+      "rule" : [ "Не знаю" ],
+      "value" : "6"
+    } ]
+  }, {
+    "entity" : {
+      "id" : 7,
+      "name" : "q7",
+      "enabled" : true,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false
+    },
+    "records" : [ {
+      "id" : 4,
+      "type" : "synonyms",
+      "rule" : [ "Да" ],
+      "value" : "4"
+    }, {
+      "id" : 5,
+      "type" : "synonyms",
+      "rule" : [ "Нет" ],
+      "value" : "5"
+    }, {
+      "id" : 6,
+      "type" : "synonyms",
+      "rule" : [ "Не знаю" ],
+      "value" : "6"
+    } ]
+  }, {
+    "entity" : {
+      "id" : 12,
+      "name" : "var_smoke",
+      "enabled" : true,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false
+    },
+    "records" : [ {
+      "id" : 28,
+      "type" : "synonyms",
+      "rule" : [ "Да, курю" ],
+      "value" : "28"
+    }, {
+      "id" : 29,
+      "type" : "synonyms",
+      "rule" : [ "Нет, не курю" ],
+      "value" : "29"
+    } ]
+  }, {
+    "entity" : {
+      "id" : 13,
+      "name" : "q13",
+      "enabled" : true,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false
+    },
+    "records" : [ {
+      "id" : 5,
+      "type" : "synonyms",
+      "rule" : [ "Нет" ],
+      "value" : "5"
+    }, {
+      "id" : 6,
+      "type" : "synonyms",
+      "rule" : [ "Не знаю" ],
+      "value" : "6"
+    } ]
+  } ],
+  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ]
+}
